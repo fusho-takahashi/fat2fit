@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import { GetStaticProps, GetStaticPaths } from 'next'
+import Link from 'next/link'
 
 const Post = ({
   postData,
@@ -26,6 +27,11 @@ const Post = ({
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
+      <div>
+        <Link href="/">
+          <a>← Back to home</a>
+        </Link>
+      </div>
     </Layout>
   )
 }

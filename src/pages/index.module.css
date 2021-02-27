@@ -1,0 +1,5 @@
+.subHeading {
+  composes: headingMd from '../styles/utils.module.css';
+  text-align: center;
+  font-weight: bold;
+}
