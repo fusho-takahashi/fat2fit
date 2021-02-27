@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Date from '../components/date'
 import { GetStaticProps } from 'next'
 
-export default function Home({
+const Home = ({
   allPostsData,
 }: {
   allPostsData: {
@@ -14,7 +14,7 @@ export default function Home({
     title: string
     id: string
   }[]
-}): JSX.Element {
+}): JSX.Element => {
   return (
     <Layout home>
       <Head>
@@ -55,3 +55,5 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   }
 }
+
+export default Home
