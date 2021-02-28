@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const siteTitle = '100日後にマッチョになるデブ'
 
@@ -13,7 +13,7 @@ const Layout = ({
   home?: boolean
 }): JSX.Element => {
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
         <link
           rel="icon"
@@ -32,25 +32,31 @@ const Layout = ({
         <meta name="og:title" content={siteTitle} />
         {/* <meta name="twitter:card" content="summary_large_image" /> */}
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <div className={utilStyles.heading2Xl}>
-              <span className={styles.titlePeace}>100日後に</span>
-              <span className={styles.titlePeace}>マッチョになる</span>
-              <span className={styles.titlePeace}>デブ</span>
-            </div>
-          </>
-        ) : (
-          <>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{siteTitle}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
+      {home ? (
+        <header className={styles.homeHeader}>
+          <Image
+            priority
+            src="/logo.svg"
+            height={420}
+            width={420}
+            alt={siteTitle}
+          />
+        </header>
+      ) : (
+        <header className={styles.postsHeader}>
+          <Link href="/">
+            <a>
+              <Image
+                priority
+                src="/logo_min.svg"
+                height={40}
+                width={40}
+                alt={siteTitle}
+              />
+            </a>
+          </Link>
+        </header>
+      )}
       <main className={styles.content}>{children}</main>
     </div>
   )
