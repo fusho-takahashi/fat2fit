@@ -19,13 +19,10 @@ const Layout = ({
           rel="icon"
           href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/flexed-biceps_1f4aa.png"
         />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
+        <meta name="description" content="100日後にマッチョになるデブ" />
         <meta
           property="og:image"
-          content="https://fat2fit.fusho-takahashi.me/posts/5%E6%97%A5%E7%9B%AE"
+          content="https://fat2fit.fusho-takahashi.me/ogp_image.png"
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
