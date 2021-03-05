@@ -24,7 +24,10 @@ const Layout = ({
           content="Learn how to build a personal website using Next.js"
         />
         <meta property="og:image" content={`/ogp_image.png`} />
-        <meta name="og:title" content={siteTitle} />
+        <meta
+          name="og:title"
+          content="https://fat2fit.fusho-takahashi.me/ogp_image.png"
+        />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       {home ? (
