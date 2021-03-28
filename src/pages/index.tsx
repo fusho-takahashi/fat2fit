@@ -22,7 +22,7 @@ const Home = ({
         <title>{siteTitle}</title>
       </Head>
       <section className={styles.subHeading}>
-        <p>26日目: 103.4kg(-7.8kg)</p>
+        <p>28日目: 103.2kg(-8.0kg)</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <ul className={utilStyles.list}>
